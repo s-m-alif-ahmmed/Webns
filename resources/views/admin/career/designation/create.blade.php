@@ -1,0 +1,79 @@
+@extends('admin.master')
+
+@section('title')
+    Add Designation
+@endsection
+
+@section('content')
+
+    <section class="py-5">
+
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-5">
+            <div class="breadcrumb-title pe-3">
+                <a href="{{ route('career-designation.index') }}">Designation</a>
+            </div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Add New Designation</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!--end breadcrumb-->
+
+        {{--        message--}}
+        <p class="text-center text-primary">{{session('message')}}</p>
+
+        <hr>
+        <!-- Create Designation Form-->
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header py-3 bg-transparent">
+                        <h5 class="mb-0">Add New Designation </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="border p-3 ">
+                            <form class="row" method="post" action="{{route('career-designation.store')}}">
+                                @csrf
+                                @method('post')
+
+                                <div class="col-12 form-group">
+                                    <label class="form-label"> Department Name</label>
+                                    <select class="form-control select2 form-select" name="career_department_id" data-placeholder="Choose one department" required>
+                                        <option label="Choose one department"></option>
+                                        @foreach($career_departments as $department)
+                                            <option value="{{ $department->id }}" {{$department->designation_id == $department->id ? 'selected' : ''}} >{{ $department->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    <x-input-error :messages="$errors->get('career_department_id')" class="mt-2" />
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="name" class="form-label"> Name</label>
+                                    <input class="form-control" type="text" name="name" id="name" placeholder="Enter designation name" required />
+                                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                                </div>
+
+                                <div class="col-12">
+                                    {{--                                    <label for="prefix_id" class="form-label"> Prefix ID</label>--}}
+                                    <input class="form-control" type="hidden" name="prefix_id" id="prefix_id" value="" placeholder="Enter prefix ID"  />
+                                    <x-input-error :messages="$errors->get('prefix_id')" class="mt-2" />
+                                </div>
+                                <div class="col-12 text-center my-3">
+                                    <button class="btn all-btn-same px-4" type="submit">Create</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+@endsection
