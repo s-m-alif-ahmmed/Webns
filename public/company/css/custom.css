@@ -1254,7 +1254,7 @@
             margin-top: 250px !important;
         }
     }
-    
+
     #subscribe-box .box-control{
         border-radius: 8px;
         position: relative;
@@ -1283,8 +1283,8 @@
             width: 255px;
         }
     }
-    
-    
+
+
     #subscribe-box .box-control .top-sub-video{
         @media screen and (min-width: 100px) and (max-width: 576px){
             height: 100px;
@@ -1437,7 +1437,7 @@
         @media screen and (min-width: 1901px){
             /*margin-left: 14% !important;*/
             margin-top: 1% !important;
-            margin-bottom: 0% !important;
+            margin-bottom: 0 !important;
             min-height: 700px;
             max-height: 750px;
         }

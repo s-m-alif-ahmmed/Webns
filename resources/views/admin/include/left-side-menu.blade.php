@@ -143,7 +143,7 @@
                             <a href="javascript:void(0)">Event</a>
                         </li>
                         <li>
-                            <a href="icons.html" class="slide-item">Font Awesome</a>
+{{--                            <a href="icons.html" class="slide-item">Font Awesome</a>--}}
                         </li>
                     </ul>
                 </li>
@@ -181,21 +181,21 @@
                             <a href="javascript:void(0)">Press Release</a>
                         </li>
                         <li class="sub-slide">
-                            <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#"><span
-                                    class="sub-side-menu__label">Submenu-2</span><i
-                                    class="sub-angle fa fa-angle-right"></i>
-                            </a>
-                            <ul class="sub-slide-menu">
-                                <li class="sub-slide2">
-                                    <a class="sub-side-menu__item2" href="#" data-bs-toggle="sub-slide2">
-                                        <span class="sub-side-menu__label2">Submenu-2.3</span>
-                                        <i class="sub-angle2 fa fa-angle-right"></i>
-                                    </a>
-                                    <ul class="sub-slide-menu2">
-                                        <li><a href="#" class="sub-slide-item2">Submenu-2.3.1</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+{{--                            <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#"><span--}}
+{{--                                    class="sub-side-menu__label">Submenu-2</span><i--}}
+{{--                                    class="sub-angle fa fa-angle-right"></i>--}}
+{{--                            </a>--}}
+{{--                            <ul class="sub-slide-menu">--}}
+{{--                                <li class="sub-slide2">--}}
+{{--                                    <a class="sub-side-menu__item2" href="#" data-bs-toggle="sub-slide2">--}}
+{{--                                        <span class="sub-side-menu__label2">Submenu-2.3</span>--}}
+{{--                                        <i class="sub-angle2 fa fa-angle-right"></i>--}}
+{{--                                    </a>--}}
+{{--                                    <ul class="sub-slide-menu2">--}}
+{{--                                        <li><a href="#" class="sub-slide-item2">Submenu-2.3.1</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
                         </li>
                     </ul>
                 </li>
@@ -209,14 +209,14 @@
                         <span class="side-menu__label">Settings</span><i class="angle fa fa-angle-right"></i>
                     </a>
                     <ul class="slide-menu">
-                        <li class="side-menu-label1">
-                            <a href="javascript:void(0)">Settings</a>
-                        </li>
-                        <li class="sub-slide">
-                            <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#">
-                                <span class="sub-side-menu__label">File Manager</span>
-                            </a>
-                        </li>
+{{--                        <li class="side-menu-label1">--}}
+{{--                            <a href="javascript:void(0)">Settings</a>--}}
+{{--                        </li>--}}
+{{--                        <li class="sub-slide">--}}
+{{--                            <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#">--}}
+{{--                                <span class="sub-side-menu__label">File Manager</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
                     </ul>
                 </li>
                 @endif
@@ -262,17 +262,17 @@
                         <span class="side-menu__label">Pages</span><i class="angle fa fa-angle-right"></i>
                     </a>
                     <ul class="slide-menu">
-                        <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>
-                        <li class="sub-slide">
-                            <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#"><span
-                                    class="sub-side-menu__label">Error Pages</span><i
-                                    class="sub-angle fa fa-angle-right"></i></a>
-                            <ul class="sub-slide-menu">
-                                <li>
-                                    <a class="sub-slide-item" href="error404.html">404 Error</a>
-                                </li>
-                            </ul>
-                        </li>
+{{--                        <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>--}}
+{{--                        <li class="sub-slide">--}}
+{{--                            <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#"><span--}}
+{{--                                    class="sub-side-menu__label">Error Pages</span><i--}}
+{{--                                    class="sub-angle fa fa-angle-right"></i></a>--}}
+{{--                            <ul class="sub-slide-menu">--}}
+{{--                                <li>--}}
+{{--                                    <a class="sub-slide-item" href="error404.html">404 Error</a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
                     </ul>
                 </li>
                 @endif
