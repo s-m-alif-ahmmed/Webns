@@ -18,20 +18,20 @@ The **Webns Application** is a full-featured web portal designed for Webns Techn
                                │            Webns Web Platform           │
                                └────────────────────┬────────────────────┘
                                                     │
-         ┌──────────────────────────────────────────┼──────────────────────────────────────────┐
-         ▼                                          ▼                                          ▼
-┌──────────────────┐                       ┌──────────────────┐                       ┌──────────────────┐
-│  Public Portal   │                       │ Outside Client   │                       │  Admin Backoffice│
-│ (Corporate Site) │                       │  (Portal Users)  │                       │   (Internal)     │
-└────────┬─────────┘                       └────────┬─────────┘                       └────────┬─────────┘
-         │                                          │                                          │
- ┌───────┴──────────────┐                   ┌───────┴──────────────┐                   ┌───────┴──────────────┐
- │ • Products & Services│                   │ • Company Registration│                   │ • User & Role RBAC   │
- │ • Blogs & Multilingual│                   │ • Team Manager Auth  │                   │ • Department Management│
- │   Bilingual FAQ      │                   │ • Roster Management  │                   │ • Career & Applicants│
- │ • Career Job Listings│                   │   (Players & Coaches)│                   │ • Client Approval    │
- │ • Inquiry Forms      │                   │ • Status Tracking    │                   │ • Content Management │
- └──────────────────────┘                   └──────────────────────┘                   └──────────────────────┘
+         ┌──────────────────────────────────────────┼────────────────────────────────────────────┐
+         ▼                                          ▼                                            ▼
+┌──────────────────┐                       ┌──────────────────┐                       ┌────────────────────┐
+│  Public Portal   │                       │ Outside Client   │                       │  Admin Backoffice  │
+│ (Corporate Site) │                       │  (Portal Users)  │                       │   (Internal)       │
+└────────┬─────────┘                       └─────────┬────────┘                       └──────────┬─────────┘
+         │                                           │                                           │
+ ┌───────┴───────────────┐                   ┌───────┴───────────────┐                   ┌───────┴────────────────┐
+ │ • Products & Services │                   │ • Company Registration│                   │ • User & Role RBAC     │
+ │ • Blogs & Multilingual│                   │ • Team Manager Auth   │                   │ • Department Management│
+ │   Bilingual FAQ       │                   │ • Roster Management   │                   │ • Career & Applicants  │
+ │ • Career Job Listings │                   │   (Players & Coaches) │                   │ • Client Approval      │
+ │ • Inquiry Forms       │                   │ • Status Tracking     │                   │ • Content Management   │
+ └───────────────────────┘                   └───────────────────────┘                   └────────────────────────┘
 ```
 
 ---
