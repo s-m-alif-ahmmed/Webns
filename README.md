@@ -1,66 +1,207 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
+<h1 align="center">Webns Technologies Office & Portal Management System</h1>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  A comprehensive Enterprise Resource, Content Management, Career Portal, and Corporate Client Management Application built with <strong>Laravel 10</strong>.
 </p>
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📌 Project Overview & System Flow
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The **Webns Application** is a full-featured web portal designed for Webns Technologies. It unifies a corporate website, an internal administrative management suite, an automated recruitment workflow, a bilingual FAQ engine, and an external company/team portal.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### System Architecture Flow:
 
-## Learning Laravel
+```
+                               ┌─────────────────────────────────────────┐
+                               │            Webns Web Platform           │
+                               └────────────────────┬────────────────────┘
+                                                    │
+         ┌──────────────────────────────────────────┼──────────────────────────────────────────┐
+         ▼                                          ▼                                          ▼
+┌──────────────────┐                       ┌──────────────────┐                       ┌──────────────────┐
+│  Public Portal   │                       │ Outside Client   │                       │  Admin Backoffice│
+│ (Corporate Site) │                       │  (Portal Users)  │                       │   (Internal)     │
+└────────┬─────────┘                       └────────┬─────────┘                       └────────┬─────────┘
+         │                                          │                                          │
+ ┌───────┴──────────────┐                   ┌───────┴──────────────┐                   ┌───────┴──────────────┐
+ │ • Products & Services│                   │ • Company Registration│                   │ • User & Role RBAC   │
+ │ • Blogs & Multilingual│                   │ • Team Manager Auth  │                   │ • Department Management│
+ │   Bilingual FAQ      │                   │ • Roster Management  │                   │ • Career & Applicants│
+ │ • Career Job Listings│                   │   (Players & Coaches)│                   │ • Client Approval    │
+ │ • Inquiry Forms      │                   │ • Status Tracking    │                   │ • Content Management │
+ └──────────────────────┘                   └──────────────────────┘                   └──────────────────────┘
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🚀 Key Modules & Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 1. 🌐 Public Website & Corporate Portal
+- **Main Pages**: Home, About Us, Team Directory, Photo Gallery, Press Releases, and Events.
+- **Product & Service Showcase**: Dynamic catalogue listing solutions, software tools, and targeted industries.
+- **Bilingual FAQ Knowledgebase**: Searchable FAQ engine supporting English and Bangla query resolution.
+- **Blog Engine**: Categorized articles with multi-tag filtering, SEO-friendly slugs, and popularity indicators.
+- **Lead Inquiries**: Contact Forms, Product Demo Requests, Technical Support Tickets, and Email Subscriptions.
 
-## Laravel Sponsors
+### 2. 💼 Career & Recruitment Portal
+- **Job Listings**: Public job board with department and designation filters.
+- **Job Applications**: Online resume upload (PDF), cover letter submissions, and applicant tracking.
+- **Recruitment Pipeline**: Internal recruitment status tracking (`Checked`, `Shortlisted`, `Interview Call`, `Rejected`, `Hired`).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 3. ⚽ Outside Users & Corporate Team Portal
+- **Company Management**: Dedicated portal for external corporate clients or sports teams to register and manage company profiles.
+- **Roster Management**: Registration of team players and coaches with ID verification photos.
+- **Approval Workflow**: Admin moderation system for approving or rejecting outside user applications and roster submissions.
 
-### Premium Partners
+### 4. 🔐 Admin Control Center & Security
+- **Role-Based Access Control (RBAC)**: Fine-grained JSON-based permission system (`Super Admin`, `Admin`, `HR`, `Content Manager`, `Viewer`).
+- **User Ban & Restriction System**: Automated middleware (`userBan`, `outsideUser`) enforcing access constraints.
+- **Employee & Department Directory**: Internal department and designation organizational hierarchy management.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+## 📁 Repository Structure
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+Webns/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/           # Administrative Controllers (Blog, Career, FAQ, Users, Contact, etc.)
+│   │   │   ├── OutsideUsers/    # External Corporate Client Controllers (Auth, Dashboard, Players, Coaches)
+│   │   │   └── Webns/           # Public Website Controllers (Home, Blog, Career, FAQ, Services, Products)
+│   │   └── Middleware/          # Auth, Ban, and Guard Middlewares
+│   └── Models/
+│       ├── User.php             # Core User Model (RBAC & Credentials)
+│       ├── Admin/               # Admin Models (User, Blog, Career, FAQ, Contact, DemoRequest, Support)
+│       └── OutsideUsers/        # Outside User Models (Company, Player, Coach)
+├── database/
+│   ├── factories/               # Namespaced Eloquent Factories with Faker Data
+│   ├── migrations/              # Database Schema Migrations (24 Tables)
+│   └── seeders/                 # Modular Database Seeders & Main DatabaseSeeder
+├── public/                      # Static Assets & Public Upload Directories
+├── resources/
+│   ├── views/                   # Blade Templates (Admin Panel, Corporate Site, Outside Portal)
+│   └── css / js                 # Frontend Styles and Scripts
+├── routes/
+│   └── web.php                  # Application Route Definitions
+├── composer.json                # PHP Dependencies
+├── package.json                 # Node.js & Frontend Build Dependencies
+└── vite.config.js               # Vite Bundler Configuration
+```
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🛠️ Project Setup & Installation Commands
 
-## Security Vulnerabilities
+Follow these step-by-step instructions to set up and run the project locally.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Prerequisites
+- **PHP**: `>= 8.1`
+- **Composer**: `>= 2.0`
+- **Node.js**: `>= 18.0` & **npm**
+- **MySQL / MariaDB Database Server**
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/s-m-alif-ahmmed/Webns.git
+cd Webns
+```
+
+---
+
+### Step 2: Install PHP Dependencies
+```bash
+composer install
+```
+
+---
+
+### Step 3: Environment Configuration
+Copy `.env.example` to create your local `.env` file:
+```bash
+cp .env.example .env
+```
+Generate the application key:
+```bash
+php artisan key:generate
+```
+
+Configure your MySQL database connection in `.env`:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=webns_office
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+---
+
+### Step 4: Run Database Migrations & Seeders
+To run the fresh database migrations along with all comprehensive seeders (which populates default Super Admin, departments, designations, blogs, FAQs, career posts, and outside users):
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+#### Default Credentials (Post-Seeding):
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Super Admin** | `superadmin@webnstech.net` | `87654321` |
+
+---
+
+### Step 5: Install Frontend Dependencies & Compile Assets
+```bash
+npm install
+npm run dev
+```
+
+For production asset bundling:
+```bash
+npm run build
+```
+
+---
+
+### Step 6: Create Storage Symlink (For Image & Document Uploads)
+```bash
+php artisan storage:link
+```
+
+---
+
+### Step 7: Launch Local Development Server
+```bash
+php artisan serve
+```
+
+Visit the application in your browser at `http://127.0.0.1:8000`.
+
+---
+
+## 📜 Database Seeding Commands Reference
+
+To re-seed specific modules or reset test data:
+```bash
+# Seed all database tables cleanly
+php artisan db:seed
+
+# Seed individual seeders
+php artisan db:seed --class=User
+php artisan db:seed --class=DepartmentSeeder
+php artisan db:seed --class=BlogSeeder
+php artisan db:seed --class=CareerSeeder
+php artisan db:seed --class=OutsideUserSeeder
+```
+
+---
+
+## 📄 License
+This project is open-sourced software licensed under the [MIT license](LICENSE).

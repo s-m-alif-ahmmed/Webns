@@ -11,6 +11,8 @@ class CareerDepartment extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $career_department, $career_departments;
 
     public static function createCareerDepartment($request)

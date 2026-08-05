@@ -11,6 +11,8 @@ class FaqCategory extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $faq_category, $faq_categories, $faqCategory, $faq;
 
     public static function createFaqCategory($request)

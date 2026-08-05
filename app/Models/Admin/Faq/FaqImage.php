@@ -9,6 +9,8 @@ class FaqImage extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $faqImage, $faqImages, $image, $imageName, $directory, $imageUrl, $extension;
 
     private static function getImageUrl($image)

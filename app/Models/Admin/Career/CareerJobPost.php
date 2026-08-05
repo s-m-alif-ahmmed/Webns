@@ -11,6 +11,8 @@ class CareerJobPost extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $job_post, $job_posts;
 
     public static function createJobPost($request)

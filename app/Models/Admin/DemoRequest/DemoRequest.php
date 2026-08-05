@@ -10,6 +10,8 @@ class DemoRequest extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $demo_request, $demo_requests;
 
     public static function createDemoRequest($request)

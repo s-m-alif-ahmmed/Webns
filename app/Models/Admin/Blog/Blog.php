@@ -12,6 +12,8 @@ class Blog extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $blog, $blogs, $image, $directory, $imageName, $imageUrl;
 
     public static function uploadImage($request)

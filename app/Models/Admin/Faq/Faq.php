@@ -12,6 +12,8 @@ class Faq extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $faq, $faqs, $image, $directory, $imageName, $imageUrl;
 
     public static function uploadImage($request)

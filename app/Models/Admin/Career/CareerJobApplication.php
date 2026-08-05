@@ -11,6 +11,8 @@ class CareerJobApplication extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $job_application, $job_applications, $resume, $directory, $resumeName, $resumeUrl;
 
     public static function uploadResume($request)

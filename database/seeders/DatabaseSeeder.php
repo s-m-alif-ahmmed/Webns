@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,26 +13,51 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-//         \App\Models\User::factory(10)->create();
+        // Disable foreign key checks to prevent truncation issues
+        Schema::disableForeignKeyConstraints();
 
-//         \App\Models\User::factory()->create([
-//             'name' => 'Super Admin',
-//             'email' => 'superadmin@webnstech.net',
-//             'password' => '87654321',
-//         ]);
-
-        // Disable foreign key checks to prevent issues with deletions
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-
-        // Clear existing data
+        // Truncate all tables in dependency order
+        DB::table('blog_tag')->truncate();
+        DB::table('blogs')->truncate();
+        DB::table('tags')->truncate();
+        DB::table('categories')->truncate();
+        DB::table('faq_images')->truncate();
+        DB::table('faqs')->truncate();
+        DB::table('faq_categories')->truncate();
+        DB::table('career_job_applications')->truncate();
+        DB::table('career_job_posts')->truncate();
+        DB::table('career_designations')->truncate();
+        DB::table('career_departments')->truncate();
+        DB::table('contact_messages')->truncate();
+        DB::table('demo_requests')->truncate();
+        DB::table('subscribe_emails')->truncate();
+        DB::table('support_messages')->truncate();
+        DB::table('outside_user_players')->truncate();
+        DB::table('outside_user_coaches')->truncate();
+        DB::table('outside_users')->truncate();
         DB::table('users')->truncate();
+        DB::table('designations')->truncate();
+        DB::table('departments')->truncate();
 
-        // Re-enable foreign key checks
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        // Re-enable foreign key constraints
+        Schema::enableForeignKeyConstraints();
 
-        // Call seeders
+        // Call seeders in logical order
         $this->call([
+            DepartmentSeeder::class,
+            DesignationSeeder::class,
             User::class,
+            CategorySeeder::class,
+            TagSeeder::class,
+            BlogSeeder::class,
+            FaqCategorySeeder::class,
+            FaqSeeder::class,
+            CareerSeeder::class,
+            ContactMessageSeeder::class,
+            DemoRequestSeeder::class,
+            SubscribeEmailSeeder::class,
+            SupportMessageSeeder::class,
+            OutsideUserSeeder::class,
         ]);
     }
 }

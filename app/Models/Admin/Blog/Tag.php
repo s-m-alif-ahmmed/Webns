@@ -10,6 +10,8 @@ class Tag extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $tag, $tags;
 
     public static function createTag($request)

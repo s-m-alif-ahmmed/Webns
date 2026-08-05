@@ -10,6 +10,8 @@ class OutsideUserCoach extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $outside_user_coach, $outside_user_coachs, $image, $employIdImage, $imageDirectory, $employIdImageDirectory, $imageName, $employIdImageName, $imageUrl, $employIdImageUrl;
 
     public static function uploadImage($request)

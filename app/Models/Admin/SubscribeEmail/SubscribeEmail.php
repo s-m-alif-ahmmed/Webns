@@ -10,6 +10,8 @@ class SubscribeEmail extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
 
     private static $subscribe_email, $subscribe_emails;
 

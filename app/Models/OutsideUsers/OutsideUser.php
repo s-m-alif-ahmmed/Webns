@@ -11,6 +11,8 @@ class OutsideUser extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $outside_user, $outside_users, $logo, $image, $employIdImage, $logoDirectory, $imageDirectory, $employIdImageDirectory, $logoName, $imageName, $employIdImageName, $logoUrl, $imageUrl, $employIdImageUrl;
 
     public static function uploadLogo($request)

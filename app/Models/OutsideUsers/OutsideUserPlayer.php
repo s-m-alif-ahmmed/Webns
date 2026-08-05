@@ -10,6 +10,8 @@ class OutsideUserPlayer extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $outside_user_player, $outside_user_players, $image, $employIdImage, $imageDirectory, $employIdImageDirectory, $imageName, $employIdImageName, $imageUrl, $employIdImageUrl;
 
     public static function uploadImage($request)

@@ -10,6 +10,8 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $category, $categories;
 
     public static function createCategory($request)

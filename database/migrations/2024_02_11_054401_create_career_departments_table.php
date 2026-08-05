@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('career_departments', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }

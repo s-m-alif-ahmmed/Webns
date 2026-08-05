@@ -10,6 +10,8 @@ class SupportMessage extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $support_message, $support_messages;
 
     public static function createSupportMessage($request)

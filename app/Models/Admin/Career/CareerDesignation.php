@@ -11,6 +11,8 @@ class CareerDesignation extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $career_designation, $career_designations;
 
     public static function createCareerDesignation($request)

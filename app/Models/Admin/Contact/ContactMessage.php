@@ -10,6 +10,8 @@ class ContactMessage extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     private static $contact_message, $contact_messages;
 
     public static function createContactMessage($request)
