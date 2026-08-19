@@ -150,13 +150,6 @@ To run the fresh database migrations along with all comprehensive seeders (which
 php artisan migrate:fresh --seed
 ```
 
-#### Default Credentials (Post-Seeding):
-| Role | Email | Password |
-| :--- | :--- | :--- |
-| **Super Admin** | `superadmin@webnstech.net` | `87654321` |
-
----
-
 ### Step 5: Install Frontend Dependencies & Compile Assets
 ```bash
 npm install

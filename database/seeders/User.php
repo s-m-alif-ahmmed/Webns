@@ -138,11 +138,11 @@ class User extends Seeder
 
         // Seed Super Admin
         UserModel::updateOrCreate(
-            ['email' => 'superadmin@webnstech.net'],
+            ['email' => 'admin@webnstech.net'],
             [
                 'name' => 'Super Admin',
                 'email_verified_at' => now(),
-                'password' => Hash::make('87654321'),
+                'password' => Hash::make('password'),
                 'officer_id' => 'SA-001',
                 'number' => '01700000000',
                 'address' => 'Dhaka, Bangladesh',
